@@ -1,0 +1,5 @@
+INDEX VERSION 1.129+D:\web-tut\.metadata\.plugins\org.eclipse.jdt.core
+2102509992.index
+198403872.index
+871153892.index
+2362392337.index
