@@ -2,6 +2,12 @@ package com.unipiloto.zaix.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
 import java.util.List;
 
 
@@ -9,6 +15,8 @@ import java.util.List;
  * The persistent class for the cursos database table.
  * 
  */
+@XmlRootElement(name="Curso")
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @Entity
 @Table(name="cursos")
 @NamedQuery(name="Curso.findAll", query="SELECT c FROM Curso c")
@@ -24,12 +32,13 @@ public class Curso implements Serializable {
 	private int precio;
 
 	//bi-directional many-to-one association to Estudiante
-	@OneToMany(mappedBy="cursoBean")
+	@OneToMany(mappedBy="cursoBean", fetch = FetchType.EAGER)
 	private List<Estudiante> estudiantes;
 
 	public Curso() {
 	}
-
+	
+	@XmlElement
 	public int getIdCurso() {
 		return this.idCurso;
 	}
@@ -37,7 +46,8 @@ public class Curso implements Serializable {
 	public void setIdCurso(int idCurso) {
 		this.idCurso = idCurso;
 	}
-
+	
+	@XmlElement
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -45,7 +55,8 @@ public class Curso implements Serializable {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
+	
+	@XmlElement
 	public int getPrecio() {
 		return this.precio;
 	}
@@ -53,7 +64,9 @@ public class Curso implements Serializable {
 	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
-
+	
+	
+	@XmlTransient
 	public List<Estudiante> getEstudiantes() {
 		return this.estudiantes;
 	}

@@ -8,7 +8,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import com.unipiloto.zaix.model.Curso;
-import com.unipiloto.zaix.model.Estudiante;
 
 /**
  * Session Bean implementation class CursosServiceImpl
@@ -19,20 +18,18 @@ public class CursosServiceImpl implements CursosServiceLocal {
 	
 	@PersistenceContext
 	EntityManager em;
-    
-    public CursosServiceImpl() {}
 
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<Curso> allCursos() {		
-		return em.createNamedQuery("Curso.findAll").getResultList();
-	}
+    /**
+     * Default constructor. 
+     */
+    public CursosServiceImpl() {
+        // TODO Auto-generated constructor stub
+    }
 
-	@SuppressWarnings("unchecked")
 	@Override
-	public List<Estudiante> allEstudiantes() {
+	public List<Curso> allCursos() {
 		// TODO Auto-generated method stub
-		return em.createNamedQuery("Estudiante.findAll").getResultList();
+		return null;
 	}
 
 }

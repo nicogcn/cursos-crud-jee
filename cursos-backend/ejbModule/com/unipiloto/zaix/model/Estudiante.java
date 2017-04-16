@@ -2,12 +2,15 @@ package com.unipiloto.zaix.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 
 /**
  * The persistent class for the estudiantes database table.
  * 
  */
+@XmlRootElement(name="Estudiante")
 @Entity
 @Table(name="estudiantes")
 @NamedQuery(name="Estudiante.findAll", query="SELECT e FROM Estudiante e")
@@ -29,7 +32,8 @@ public class Estudiante implements Serializable {
 
 	public Estudiante() {
 	}
-
+	
+	@XmlElement
 	public int getIdEstudiante() {
 		return this.idEstudiante;
 	}
@@ -37,7 +41,8 @@ public class Estudiante implements Serializable {
 	public void setIdEstudiante(int idEstudiante) {
 		this.idEstudiante = idEstudiante;
 	}
-
+	
+	@XmlElement
 	public int getEdad() {
 		return this.edad;
 	}
@@ -45,7 +50,8 @@ public class Estudiante implements Serializable {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
-
+	
+	@XmlElement
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -53,7 +59,8 @@ public class Estudiante implements Serializable {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
+	
+	@XmlElement
 	public Curso getCursoBean() {
 		return this.cursoBean;
 	}

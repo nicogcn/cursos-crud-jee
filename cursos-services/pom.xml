@@ -34,4 +34,12 @@
       </plugin>
     </plugins>
   </build>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.unipiloto.zaix</groupId>
+  		<artifactId>cursos-backend</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  		<type>ejb</type>
+  	</dependency>
+  </dependencies>
 </project>
