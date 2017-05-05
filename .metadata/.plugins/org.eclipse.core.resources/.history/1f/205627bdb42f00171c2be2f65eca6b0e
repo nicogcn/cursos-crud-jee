@@ -1,0 +1,14 @@
+<div>
+	<h1>Nuevo estudiante</h1>	
+	<form>
+		<label>Nombre: </label><input type="text" placeholder="Nombre">
+		<label>Edad: </label>
+		<select >
+			<option ng-repeat="edad in edades">{{edad}}</option>
+		</select>
+		<label>Curso: </label>
+		<select>
+			<option ng-repeat="c in cursos"> {{ c.nombre }} </option>
+		</select>
+	</form>	
+</div>

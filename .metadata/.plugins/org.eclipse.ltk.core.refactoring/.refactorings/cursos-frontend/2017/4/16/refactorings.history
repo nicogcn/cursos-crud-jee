@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;cursos-frontend&apos;&#x0D;&#x0A;- Original project: &apos;cursos-frontend&apos;&#x0D;&#x0A;- Original element: &apos;cursos-frontend/src/com.unipiloto.zaix.rest&apos;" description="Delete element" element1="/src&lt;com.unipiloto.zaix.rest" element2="/src&lt;com.unipiloto.zaix" element3="/src&lt;com.unipiloto" element4="/src&lt;com" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1492319981148" subPackages="false" version="1.0"/>
+</session>

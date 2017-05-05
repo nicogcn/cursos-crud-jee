@@ -3,7 +3,7 @@ package com.unipiloto.zaix.rest;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@ApplicationPath("/cursos")
+@ApplicationPath("/zaix")
 public class CursosApplication extends Application {
 
 }

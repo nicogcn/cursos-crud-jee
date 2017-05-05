@@ -12,4 +12,14 @@ public interface CursosServiceLocal {
 	List<Curso> allCursos();
 	
 	List<Estudiante> allEstudiantes();
+	
+	Estudiante nuevoEstudiante(Estudiante EstInstance);
+	
+	Estudiante estudianteById(int id);
+	
+	Estudiante modificarEstudiante(Estudiante EstInstance);
+	
+	Estudiante eliminarEstudiante(int id);
+	
+	List<Estudiante> estudiantesDelCurso(int idCurso);
 }

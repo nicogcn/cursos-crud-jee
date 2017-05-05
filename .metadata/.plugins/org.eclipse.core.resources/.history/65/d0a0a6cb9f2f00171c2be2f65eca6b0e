@@ -1,0 +1,28 @@
+<div>
+	<h1>Nuevo estudiante</h1>
+	<script type="text/javascript">
+		document.write("siii");
+	</script>
+	<form>
+		<label>Nombre</label><input type="text">
+		<label>Edad</label>
+		<select>			
+			<option>1</option>
+		</select>
+		<label>Curso</label>
+		<select>
+		</select>
+	</form>
+	<div>
+		<script type="text/javascript">
+			for (var int = 0; int < 20; int++) {
+				document.write("<p>Siii</p>")
+			}
+		</script>
+	</div>
+	<script>
+			for (var int = 15; int < 34; int++) {
+				document.write("hola");
+			} 
+			</script>
+</div>

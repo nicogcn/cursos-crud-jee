@@ -1,0 +1,13 @@
+<div>
+	<h1>Nuevo estudiante</h1>	
+	<form>
+		<label>Nombre</label><input type="text">
+		<label>Edad</label>
+		<select >
+			<option ng-repeat="edad in edades">{{edad}} </option>
+		</select>
+		<label>Curso</label>
+		<select>
+		</select>
+	</form>	
+</div>

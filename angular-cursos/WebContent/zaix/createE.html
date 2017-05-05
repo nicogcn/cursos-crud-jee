@@ -1,0 +1,15 @@
+<div>
+	<h1>Nuevo estudiante ZAIX!</h1>	
+	<form>
+		<label>Nombre: </label><input type="text" placeholder="Nombre" ng-model="estudiante.nombre">
+		<label>Edad: </label>
+		<select ng-model="estudiante.edad">
+			<option ng-repeat="edad in edades">{{edad}}</option>
+		</select>
+		<label>Curso: </label>
+		<select ng-model="estudiante.cursoBean.idCurso">
+			<option ng-repeat="c in cursos" ng-value="c.idCurso"> {{ c.nombre }} </option>
+		</select>
+		<button ng-click="createStudent()">Registrar</button>
+	</form>	
+</div>

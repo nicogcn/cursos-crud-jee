@@ -1,0 +1,17 @@
+<div>
+	<h1>Nuevo estudiante</h1>
+	<form>
+		<label>Nombre</label><input type="text">
+		<label>Edad</label>
+		<select>
+			
+			<option>1</option>
+		</select>
+	
+	</form>
+	<script>
+			for (var int = 15; int < 34; int++) {
+				document.write("hola");
+			} 
+			</script>
+</div>

@@ -1,0 +1,24 @@
+<div>
+	<h2>Lista estudiantes ZAIX!</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Edad</th>
+				<th>Curso</th>
+				<th>Editar</th>
+				<th>Eliminar</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="e in est">
+				<td>{{e.nombre}}</td>
+				<td>{{e.edad}}</td>
+				<td>{{e.cursoBean.nombre}}</td>
+				<td><button>°°°</button></td>
+				<td><button ng-click="removeest(e.idEstudiante)">xxx</button></td>
+			</tr>
+		</tbody>		
+	</table>
+
+</div>

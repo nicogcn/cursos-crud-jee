@@ -35,4 +35,36 @@ public class CursosServiceImpl implements CursosServiceLocal {
 		return em.createNamedQuery("Estudiante.findAll").getResultList();
 	}
 
+	@Override
+	public Estudiante nuevoEstudiante(Estudiante EstInstance) {
+		// TODO Auto-generated method stub
+		em.persist(EstInstance);
+		return EstInstance;
+	}
+
+	@Override
+	public Estudiante estudianteById(int id) {
+		// TODO Auto-generated method stub
+		return em.find(Estudiante.class, id);
+	}
+
+	@Override
+	public Estudiante modificarEstudiante(Estudiante EstInstance) {
+		em.merge(EstInstance);
+		return EstInstance;
+	}
+
+	@Override
+	public Estudiante eliminarEstudiante(int id) {
+		Estudiante e = em.find(Estudiante.class, id);
+		em.remove(e);
+		return e;
+	}
+
+	@Override
+	public List<Estudiante> estudiantesDelCurso(int idCurso) {
+		Curso c = em.find(Curso.class, idCurso);
+		return c.getEstudiantes();
+	}
+
 }

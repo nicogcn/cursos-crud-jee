@@ -1,0 +1,38 @@
+/**
+ * Ejemplo de consumo servicio REST utilizando ng-resource
+ */
+
+
+/*
+ * Servicios de cursos
+ */
+var cursos = angular.module('cursos', ['ngResource']);
+	
+/*cursosservices.factory('cursosall', function($resource){
+	return $resource('http://localhost:8080/cursos-services/zaix/cursos/all', {}, {
+		query:{ method:'GET', isArray: true }
+	})
+})*/
+
+var services = angular.module('cursos.services', ['ngResource']);
+
+services.factory('cursosall', function($resource){
+	return $resource('http://localhost:8080/cursos-services/zaix/cursos/all', {}, {
+		query:{ method:'GET', params:{}, isArray: true }
+	})
+})
+
+/*
+ * Controladores aplicación
+ */
+var cursoscon = angular.module('cursos.control',[]);
+
+
+cursoscon.controller('cursoslist',['$scope', 'cursosall', function($scope, cursosall){
+	$scope.cursos = cursosall.query();
+}]);
+
+/*
+cursoscon.controller('cursoslist',function($scope, cursosall){
+	$scope.cursos = cursosall.query();
+})*/

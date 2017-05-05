@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script type="text/javascript" src="../js/resource-example.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<title>Cursos ng</title>
+</head>
+<body>
+<div ng-app="cursos" ng-controller="cursoslist">
+	<h1> ZAIX resources</h1>
+	<h6>CURSOS</h6>
+	<ul >		
+		<li ng-repeat="c in cursos">{{ c.nombre }} {{ c.precio }}</li>
+	</ul>
+	<a ng-click="create()">Registar estudiante</a>
+	<button ng-click="lista()">Lista estudiantes!</button>
+	<a>..</a>	
+	<div ng-view></div>
+</div>
+
+</body>
+</html>

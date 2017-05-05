@@ -1,0 +1,24 @@
+<div>
+	<h2>Estu NGView</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Edad</th>
+				<th>Curso</th>
+				<th>Editar</th>
+				<th>Eliminar</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="e in est">
+				<td>{{e.nombre}}</td>
+				<td>{{e.edad}}</td>
+				<td>{{e.cursoBean.nombre}}</td>
+				<td><a> °°° </a></td>
+				<td><a> xxx </a></td>
+			</tr>
+		</tbody>		
+	</table>
+
+</div>

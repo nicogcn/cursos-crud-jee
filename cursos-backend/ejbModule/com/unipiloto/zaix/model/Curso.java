@@ -78,7 +78,6 @@ public class Curso implements Serializable {
 	public Estudiante addEstudiante(Estudiante estudiante) {
 		getEstudiantes().add(estudiante);
 		estudiante.setCursoBean(this);
-
 		return estudiante;
 	}
 

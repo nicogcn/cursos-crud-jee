@@ -1,0 +1,16 @@
+<div>
+	<h1>Nuevo estudiante</h1>
+	<form>
+		<label>Nombre</label><input type="text">
+		<label>Edad</label>
+		<select>
+			<script>
+			for (var int = 15; int < 34; int++) {
+				document.write("hola");
+			} 
+			</script>
+			<option>1</option>
+		</select>
+	
+	</form>
+</div>
