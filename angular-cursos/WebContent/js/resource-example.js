@@ -49,11 +49,11 @@ services.factory('estudiantedel', function($resource){
 	})
 });
 //Servicio estudiante por id
-/*services.factory('estudianteid', function($resource){
+services.factory('estudianteid', function($resource){
 	return $resource('http://localhost:8080/cursos-services/zaix/cursos/find/:id', {}, {
 		show:{ method:'GET', params:{id: '@id'}}
 	})
-});*/
+});
 //Servicio ACTUALIZAR estudiante
 services.factory('estudianteupd', function($resource){
 	return $resource('http://localhost:8080/cursos-services/zaix/cursos/modify/:id', {}, {
@@ -102,15 +102,22 @@ cursoscon.controller('estudiantecrear',['$scope', 'estudiantenew', 'cursosall', 
 	}
 }]);
 //controlador editar estudiante
-cursoscon.controller('estudianteeditar',['$scope', 'estudianteupd', 'estudianteid', 'cursosall', '$routeParams', '$location', function($scope, estudianteupd, cursosall, $location, estudianteid, $routeParams){
+cursoscon.controller('estudianteeditar',['$scope', 'cursosall', '$routeParams', '$location','estudianteid','estudianteupd', function($scope, cursosall, $routeParams, $location, estudianteid, estudianteupd){
 	$scope.edades = new Array(26);
 	for (var int = 0; int < $scope.edades.length; int++) {
 		$scope.edades[int] = int + 15 ;
 	}
 	$scope.cursos = cursosall.query();
-	/*
+	$scope.param = $routeParams.id;
+	$scope.est = estudianteid.show({ id:$routeParams.id });
+	$scope.estudiante = estudianteid.show({ id: $routeParams.id });
+	$scope.cancelar = function(){
+		$location.path('/lista');
+	}
+	
 	$scope.actualEst = function(){
-		estudianteupd.update($scope.estudiante);
-	}*/
-	//$scope.estudiante = estudianteid.show({ id: $routeParams.id })
+		estudianteupd.update({id:$routeParams.id},$scope.estudiante);
+		$location.path('/lista');
+	}
+	
 }]);

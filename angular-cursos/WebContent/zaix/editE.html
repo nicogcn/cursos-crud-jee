@@ -1,16 +1,22 @@
 <div>
-	<h1>Actualizar estudiante ZAIX!</h1>	
+	<h1>Actualizar estudiante ZAIX!</h1>
+	<h2>{{ param }}</h2>	
+	
+	<h3>{{ est.idEstudiante }}</h3>
+	<h3>{{ est.nombre }}</h3>
+	<h3>{{ est.edad }}</h3>
+	<h3>{{ est.cursoBean.nombre }}</h3>
 	<form>
 		<label>Nombre: </label><input type="text" placeholder="Nombre" ng-model="estudiante.nombre">
 		<label>Edad: </label>
 		<select ng-model="estudiante.edad">
-			<option ng-repeat="edad in edades">{{edad}}</option>
+			<option ng-repeat="edad in edades" ng-value="edad">{{edad}}</option>
 		</select>
 		<label>Curso: </label>
 		<select ng-model="estudiante.cursoBean.idCurso">
 			<option ng-repeat="c in cursos" ng-value="c.idCurso"> {{ c.nombre }} </option>
 		</select>
-		<button ng-click="">Actualizar</button>
-		<button ng-click="">Cancelar</button>
+		<button ng-click="actualEst()">Actualizar</button>
+		<button ng-click="cancelar()">Cancelar</button>
 	</form>	
 </div>
